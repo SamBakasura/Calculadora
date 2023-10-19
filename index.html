@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>A</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-auto bg-secondary p-5 rounded">
+                <h1 class= "bg-light"><strong>⠀[] [] [] [] [] []⠀</strong></h1>
+                <br>
+                <form onsubmit="return false">
+
+                        <!--Imput do 1 código-->
+                <div class="row">
+                    <div class="col">
+                        <label for="num01" class="form-lable fw-bold text-light"><i>Numeração Primária</i></label>
+                            <input type="number" name="num01" id="num01" class="form-control"/>
+                </div>
+                    </div>
+
+                        <!--Imput do 2 código-->       
+                <div class="row">
+                    <div class="col">
+                        <label for="num02" class="form-lable fw-bold text-light"><i>Numeração Secundária</i></label>
+                            <input type="number" name="num02" id="num02" class="form-control"/>
+                    </div>
+                </div>
+
+                        <!--Operadores Matemáticos-->
+                <div class="row">
+                    <div class="col">
+                        <label for="Operador" class="form-lable fw-bold text-light"><i>Operador:</i></label>
+                        <select name="Operador" id="Operador" class="form-select">
+                            <option value="">Escolha:</option>
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </div>
+                </div>
+                
+                        <!--Imagem de Fundo-->
+                        <div class="row justify-content-center">
+                            <div class="col align-itens-center mt-2">
+                                <img class="img-thumbnail" id="imgOperacao"/>
+                            </div>
+                        </div>  
+
+                        <!--Resultado-->
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label fa-bold text-light">Resultado:</label>
+                            </div>
+                        
+
+                        <!--Resultado Da Operação Matemática-->
+                            <div class="col">
+                                <label class="form-label fa-bold text-light" id="resultado">-</label>
+                            </div>
+                        </div>
+
+                        <!--Botão de Calcular e Botão de Limpar-->
+                        <div class="row">
+                            <div class="col">  
+                                <button class = "btn btn-primary mt-2" name="calcular" id="calcular" onclick="somar()">Computar</button>
+                            </div>
+
+                            <div class="col">
+                                <button class="btn btn-danger mt-2" name="limpar" id="Limpar">Erase Word!</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+        //Declaração da Soma
+            function somar(){
+        //Declaração das Variáveis
+            let num01;
+            let num02;
+            let resultado;
+        //Entrada de dado do número 1
+        num01 = parseInt(document.querySelector('#num01').value);
+        num02 = parseInt(document.querySelector('#num02').value);
+
+        resultado = num01 + num02;
+        
+        document.querySelector('#resultado').innerHTML = resultado;
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
