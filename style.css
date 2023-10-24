@@ -1,3 +1,34 @@
+body{
+    position: relative;
+    height: 100vh;
+    background-image:linear-gradient(to bottom right,black,gray,black);
+}
+.form1{
+    position: absolute;
+    top: 245px;
+    left: 795px;
+    height: 441px;
+    width: 330px;
+    border-radius: 5px;
+    background-color: rgb(47, 0, 255);
+    opacity: 0.2;
+    z-index: 1;
+} 
+.form1:hover{
+    color: red;
+    transition: 4s;
+}
+.form2{
+    position: absolute;
+    top: 290px;
+    left: 842px;
+    height: 55px;
+    width: 235px;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 21);
+    opacity: 0.4;
+    z-index: 2;
+}
 h1{
     font-size: 30px;
     font-style: italic;
