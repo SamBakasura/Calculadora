@@ -5,21 +5,6 @@ body{
 }
 .form1{
     position: absolute;
-    top: 245px;
-    left: 795px;
-    height: 441px;
-    width: 330px;
-    border-radius: 5px;
-    background-color: rgb(47, 0, 255);
-    opacity: 0.2;
-    z-index: 1;
-} 
-.form1:hover{
-    color: red;
-    transition: 4s;
-}
-.form2{
-    position: absolute;
     top: 290px;
     left: 842px;
     height: 55px;
